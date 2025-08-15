@@ -1,0 +1,373 @@
+[
+    {
+      "id": "PHONE_001",
+      "image": "https://i.ibb.co.com/67cf0FWd/i-Phone-15-Pro-Max.webp",
+      "name": "iPhone 15 Pro Max",
+      "category": "Smartphone",
+      "brand": "Apple",
+      "price": 1199.99,
+      "inStock": true,
+      "quantity": 45,
+      "features": [
+        "6.7-inch Super Retina XDR display",
+        "A17 Pro chip",
+        "48MP main camera",
+        "Titanium design",
+        "USB-C connector",
+        "Action Button"
+      ],
+      "rating": 4.6,
+      "reviewCount": 1284,
+      "color": ["Natural Titanium", "Blue Titanium", "White Titanium", "Black Titanium"],
+      "storage": ["256GB", "512GB", "1TB"],
+      "warranty": "1 year"
+    },
+    {
+      "id": "PHONE_002",
+      "image": "https://i.ibb.co.com/RkNq4M1J/samsung-galaxy-s24-ultra-titanium-gray-official-image.webp",
+      "name": "Samsung Galaxy S24 Ultra",
+      "category": "Smartphone",
+      "brand": "Samsung",
+      "price": 1299.99,
+      "inStock": true,
+      "quantity": 32,
+      "features": [
+        "6.8-inch Dynamic AMOLED 2X",
+        "Snapdragon 8 Gen 3",
+        "200MP main camera",
+        "S Pen included",
+        "5000mAh battery",
+        "AI-powered features"
+      ],
+      "rating": 4.5,
+      "reviewCount": 976,
+      "color": ["Titanium Gray", "Titanium Black", "Titanium Violet", "Titanium Yellow"],
+      "storage": ["256GB", "512GB", "1TB"],
+      "warranty": "1 year"
+    },
+    {
+      "id": "PHONE_003",
+      "image": "https://i.ibb.co.com/TBC1rPxb/PIX8-PRO-1.jpg",
+      "name": "Google Pixel 8 Pro",
+      "category": "Smartphone",
+      "brand": "Google",
+      "price": 999.99,
+      "inStock": false,
+      "quantity": 0,
+      "features": [
+        "6.7-inch LTPO OLED display",
+        "Google Tensor G3",
+        "50MP main camera",
+        "Magic Eraser",
+        "7 years of updates",
+        "Temperature sensor"
+      ],
+      "rating": 4.4,
+      "reviewCount": 654,
+      "color": ["Obsidian", "Porcelain", "Bay"],
+      "storage": ["128GB", "256GB", "512GB"],
+      "warranty": "1 year"
+    },
+    {
+      "id": "LAPTOP_001",
+      "image": "https://i.ibb.co.com/CKk4MX0h/Apple-Mac-Book-Pro-M3-Max.png",
+      "name": "MacBook Pro 16-inch M3 Max",
+      "category": "Laptop",
+      "brand": "Apple",
+      "price": 3499.99,
+      "inStock": true,
+      "quantity": 18,
+      "features": [
+        "16.2-inch Liquid Retina XDR display",
+        "M3 Max chip",
+        "36GB unified memory",
+        "1TB SSD storage",
+        "Up to 22 hours battery life",
+        "Thunderbolt 4 ports"
+      ],
+      "rating": 4.8,
+      "reviewCount": 423,
+      "color": ["Space Black", "Silver"],
+      "specs": {
+        "processor": "Apple M3 Max",
+        "ram": "36GB",
+        "storage": "1TB SSD",
+        "display": "16.2-inch"
+      },
+      "warranty": "1 year"
+    },
+    {
+      "id": "LAPTOP_002",
+      "image": "https://i.ibb.co.com/QjtGjdbT/Dell-XPS-13-Plus-9320-3-5-K-MC-Solution-BD-1200x675.webp",
+      "name": "Dell XPS 13 Plus",
+      "category": "Laptop",
+      "brand": "Dell",
+      "price": 1399.99,
+      "inStock": true,
+      "quantity": 27,
+      "features": [
+        "13.4-inch OLED InfinityEdge display",
+        "Intel Core i7-13700H",
+        "16GB LPDDR5 RAM",
+        "512GB SSD",
+        "Haptic touchpad",
+        "Zero-lattice keyboard"
+      ],
+      "rating": 4.3,
+      "reviewCount": 298,
+      "color": ["Platinum Silver", "Graphite"],
+      "specs": {
+        "processor": "Intel Core i7-13700H",
+        "ram": "16GB",
+        "storage": "512GB SSD",
+        "display": "13.4-inch OLED"
+      },
+      "warranty": "1 year"
+    },
+    {
+      "id": "LAPTOP_003",
+      "image": "https://i.ibb.co.com/dwTbWBQt/mba15-m3-silver-Custom-Mac-BD.webp",
+      "name": "MacBook Air 15-inch M3",
+      "category": "Laptop",
+      "brand": "Apple",
+      "price": 1299.99,
+      "inStock": true,
+      "quantity": 41,
+      "features": [
+        "15.3-inch Liquid Retina display",
+        "M3 chip",
+        "8GB unified memory",
+        "256GB SSD storage",
+        "Up to 18 hours battery life",
+        "Fanless design"
+      ],
+      "rating": 4.7,
+      "reviewCount": 567,
+      "color": ["Space Gray", "Silver", "Starlight", "Midnight"],
+      "specs": {
+        "processor": "Apple M3",
+        "ram": "8GB",
+        "storage": "256GB SSD",
+        "display": "15.3-inch"
+      },
+      "warranty": "1 year"
+    },
+    {
+      "id": "WATCH_001",
+      "image": "https://i.ibb.co.com/0pYcJv2Z/dc9fbf45d5948ba4f975479d297aa2d6.jpg",
+      "name": "Apple Watch Series 9",
+      "category": "Smartwatch",
+      "brand": "Apple",
+      "price": 399.99,
+      "inStock": true,
+      "quantity": 63,
+      "features": [
+        "45mm Retina display",
+        "S9 SiP chip",
+        "Double Tap gesture",
+        "Blood oxygen monitoring",
+        "ECG capability",
+        "Water resistant to 50 meters"
+      ],
+      "rating": 4.5,
+      "reviewCount": 892,
+      "color": ["Pink", "Starlight", "Silver", "Space Gray", "Product RED"],
+      "sizes": ["41mm", "45mm"],
+      "warranty": "1 year"
+    },
+    {
+      "id": "WATCH_002",
+      "image": "https://i.ibb.co.com/ks61YKR7/SAMSUNG-Galaxy-Watch-6-Classic-47mm.jpg",
+      "name": "Samsung Galaxy Watch 6 Classic",
+      "category": "Smartwatch",
+      "brand": "Samsung",
+      "price": 429.99,
+      "inStock": true,
+      "quantity": 29,
+      "features": [
+        "47mm Super AMOLED display",
+        "Exynos W930 processor",
+        "Rotating bezel",
+        "Sleep tracking",
+        "Body composition analysis",
+        "5ATM water resistance"
+      ],
+      "rating": 4.2,
+      "reviewCount": 445,
+      "color": ["Black", "Silver"],
+      "sizes": ["43mm", "47mm"],
+      "warranty": "1 year"
+    },
+    {
+      "id": "WATCH_003",
+      "image": "https://i.ibb.co.com/1f9df6Kr/cf-lg-69399493-9540-4ea5-8033-b4aba04cea8f.webp",
+      "name": "Garmin Fenix 7X Sapphire",
+      "category": "Smartwatch",
+      "brand": "Garmin",
+      "price": 899.99,
+      "inStock": false,
+      "quantity": 0,
+      "features": [
+        "1.4-inch display",
+        "Multi-band GPS",
+        "Solar charging",
+        "Up to 28 days battery life",
+        "100+ sport modes",
+        "Sapphire crystal lens"
+      ],
+      "rating": 4.6,
+      "reviewCount": 234,
+      "color": ["Carbon Gray", "Mineral Blue"],
+      "sizes": ["51mm"],
+      "warranty": "1 year"
+    },
+    {
+      "id": "ACC_001",
+      "name": "AirPods Pro (2nd generation)",
+      "category": "Audio Accessory",
+      "brand": "Apple",
+      "price": 249.99,
+      "inStock": true,
+      "quantity": 78,
+      "features": [
+        "Active Noise Cancellation",
+        "Transparency mode",
+        "Spatial Audio",
+        "H2 chip",
+        "Up to 6 hours listening time",
+        "MagSafe charging case"
+      ],
+      "rating": 4.7,
+      "reviewCount": 1156,
+      "color": ["White"],
+      "warranty": "1 year"
+    },
+    {
+      "id": "ACC_002",
+      "name": "Sony WH-1000XM5",
+      "category": "Audio Accessory",
+      "brand": "Sony",
+      "price": 399.99,
+      "inStock": true,
+      "quantity": 34,
+      "features": [
+        "Industry-leading noise canceling",
+        "30-hour battery life",
+        "Quick charge (3 min = 3 hours)",
+        "Speak-to-chat technology",
+        "Touch sensor controls",
+        "360 Reality Audio"
+      ],
+      "rating": 4.6,
+      "reviewCount": 823,
+      "color": ["Black", "Silver"],
+      "warranty": "1 year"
+    },
+    {
+      "id": "ACC_003",
+      "name": "Anker PowerCore 10000",
+      "category": "Power Bank",
+      "brand": "Anker",
+      "price": 39.99,
+      "inStock": true,
+      "quantity": 156,
+      "features": [
+        "10000mAh capacity",
+        "PowerIQ technology",
+        "Compact design",
+        "MultiProtect safety system",
+        "LED power indicator",
+        "Fast charging"
+      ],
+      "rating": 4.4,
+      "reviewCount": 2043,
+      "color": ["Black", "White", "Blue"],
+      "warranty": "18 months"
+    },
+    {
+      "id": "ACC_004",
+      "name": "Logitech MX Master 3S",
+      "category": "Computer Accessory",
+      "brand": "Logitech",
+      "price": 99.99,
+      "inStock": true,
+      "quantity": 67,
+      "features": [
+        "8K DPI sensor",
+        "Quiet clicks",
+        "USB-C fast charging",
+        "Flow cross-computer control",
+        "Customizable buttons",
+        "70-day battery life"
+      ],
+      "rating": 4.5,
+      "reviewCount": 756,
+      "color": ["Graphite", "Pale Gray"],
+      "warranty": "1 year"
+    },
+    {
+      "id": "TABLET_001",
+      "name": "iPad Pro 12.9-inch M2",
+      "category": "Tablet",
+      "brand": "Apple",
+      "price": 1099.99,
+      "inStock": true,
+      "quantity": 23,
+      "features": [
+        "12.9-inch Liquid Retina XDR display",
+        "M2 chip",
+        "12MP cameras",
+        "Apple Pencil (2nd gen) support",
+        "Thunderbolt/USB 4",
+        "Face ID"
+      ],
+      "rating": 4.6,
+      "reviewCount": 445,
+      "color": ["Space Gray", "Silver"],
+      "storage": ["128GB", "256GB", "512GB", "1TB", "2TB"],
+      "warranty": "1 year"
+    },
+    {
+      "id": "GAMING_001",
+      "name": "Steam Deck OLED",
+      "category": "Gaming Device",
+      "brand": "Valve",
+      "price": 549.99,
+      "inStock": false,
+      "quantity": 0,
+      "features": [
+        "7.4-inch OLED HDR display",
+        "AMD APU",
+        "16GB LPDDR5 RAM",
+        "512GB NVMe SSD",
+        "Trackpads and gyroscope",
+        "Steam OS"
+      ],
+      "rating": 4.3,
+      "reviewCount": 189,
+      "color": ["Black"],
+      "storage": ["512GB", "1TB"],
+      "warranty": "1 year"
+    },
+    {
+      "id": "ACC_005",
+      "name": "Belkin 3-in-1 Wireless Charger",
+      "category": "Charging Accessory",
+      "brand": "Belkin",
+      "price": 149.99,
+      "inStock": true,
+      "quantity": 45,
+      "features": [
+        "Charges iPhone, Apple Watch, AirPods",
+        "15W wireless charging",
+        "MagSafe compatible",
+        "LED indicator",
+        "Foreign object detection",
+        "Includes power adapter"
+      ],
+      "rating": 4.1,
+      "reviewCount": 312,
+      "color": ["White", "Black"],
+      "warranty": "2 years"
+    }
+  ]

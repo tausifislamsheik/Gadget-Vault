@@ -3,9 +3,9 @@ import { FiShoppingCart } from "react-icons/fi";
 
 const Navbar = () => {
     const navList = <>
-    <li><NavLink>Home</NavLink></li>
-    <li><NavLink>Statistics</NavLink></li>
-    <li><NavLink>Dashboard</NavLink></li>
+    <li><NavLink className={({isActive, isPending}) => isActive ? 'text-purple-500 bg-purple-50 rounded-sm px-3 py-1 font-semibold' : isPending ? '' : ''} to='/'>Home</NavLink></li>
+    <li><NavLink className={({isActive, isPending}) => isActive ? 'text-purple-500 bg-purple-50 rounded-sm px-3 py-1 font-semibold' : isPending ? '' : ''} to='/statistics'>Statistics</NavLink></li>
+    <li><NavLink className={({isActive, isPending}) => isActive ? 'text-purple-500 bg-purple-50 rounded-sm px-3 py-1 font-semibold' : isPending ? '' : ''} to='/dashboard'>Dashboard</NavLink></li>
     </>
     return (
         <div className="navbar py-8">
@@ -31,7 +31,7 @@ const Navbar = () => {
                 <button className="btn btn-circle text-xl">
                 <FiShoppingCart />
                 </button>
-                 <button className="btn btn-circle">
+                 <button className="btn btn-circle text-xl">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2.5" stroke="currentColor" className="size-[1.2em]"><path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" /></svg>
                 </button>
             </div>
