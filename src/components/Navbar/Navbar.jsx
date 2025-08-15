@@ -8,7 +8,7 @@ const Navbar = () => {
     <li><NavLink>Dashboard</NavLink></li>
     </>
     return (
-        <div className="navbar">
+        <div className="navbar py-8">
             <div className="navbar-start">
                 <div className="dropdown">
                 <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -20,7 +20,7 @@ const Navbar = () => {
                     {navList}
                 </ul>
                 </div>
-                <h1 className="cursor-pointer font-bold text-xl">Gadget Vault</h1>
+                <h1 className="cursor-pointer font-bold lg:text-2xl">Gadget Vault</h1>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="gap-5 menu-horizontal px-1">
