@@ -15,11 +15,13 @@ import SmartWatches from './components/SmartWatches/SmartWatches';
 import Phones from './components/Phones/Phones';
 import MacBooks from './components/MacBooks/MacBooks';
 import Accessories from './components/Accessories/Accessories';
+import ErrorPage from './components/ErrorPage/ErrorPage';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement:<ErrorPage></ErrorPage>,
     children:[
       {
         path:'/',
