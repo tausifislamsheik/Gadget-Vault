@@ -223,6 +223,7 @@
     },
     {
       "id": "ACC_001",
+      "image": "https://i.ibb.co.com/zMdGBmK/Air-Pods-Pro-2nd-Gen-with-USB-C-PDP-Image-Position-2-en-UScopy.webp",
       "name": "AirPods Pro (2nd generation)",
       "category": "Audio Accessory",
       "brand": "Apple",
@@ -244,6 +245,7 @@
     },
     {
       "id": "ACC_002",
+      "image": "https://i.ibb.co.com/fYKJFQds/Sony-WH-1000-XM5-Wireless-Noise-Canceling-Headphones-1.jpg",
       "name": "Sony WH-1000XM5",
       "category": "Audio Accessory",
       "brand": "Sony",
@@ -265,6 +267,7 @@
     },
     {
       "id": "ACC_003",
+      "image": "https://i.ibb.co.com/205jdfSM/images.jpg",
       "name": "Anker PowerCore 10000",
       "category": "Power Bank",
       "brand": "Anker",
@@ -286,6 +289,7 @@
     },
     {
       "id": "ACC_004",
+      "image": "https://i.ibb.co.com/21M2X1T5/Logitech-MX-Master-3-Advanced-Wireless-7-Button-Mouse-3-1.webp",
       "name": "Logitech MX Master 3S",
       "category": "Computer Accessory",
       "brand": "Logitech",
@@ -307,6 +311,7 @@
     },
     {
       "id": "TABLET_001",
+      "image": "https://i.ibb.co.com/LDX49v34/ipad-pro-m2-space-gray-01-500x500.webp",
       "name": "iPad Pro 12.9-inch M2",
       "category": "Tablet",
       "brand": "Apple",
@@ -329,6 +334,7 @@
     },
     {
       "id": "GAMING_001",
+      "image": "https://i.ibb.co.com/2YH4CTpZ/steam-deck-oled-1-500x500.webp",
       "name": "Steam Deck OLED",
       "category": "Gaming Device",
       "brand": "Valve",
@@ -351,6 +357,7 @@
     },
     {
       "id": "ACC_005",
+      "image": "https://i.ibb.co.com/fzyGSL0P/Wireless-1-800x800.jpg",
       "name": "Belkin 3-in-1 Wireless Charger",
       "category": "Charging Accessory",
       "brand": "Belkin",
