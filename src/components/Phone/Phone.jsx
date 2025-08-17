@@ -1,5 +1,5 @@
-const Laptop = ({laptop}) => {
-    const {image, name, price} = laptop
+const Phone = ({phone}) => {
+    const {image,name,price} = phone;
     return (
         <div className="card p-5 h-96 border border-gray-300">
             <figure className="bg-gray-50 p-5">
@@ -19,4 +19,4 @@ const Laptop = ({laptop}) => {
     );
 };
 
-export default Laptop;
+export default Phone;
