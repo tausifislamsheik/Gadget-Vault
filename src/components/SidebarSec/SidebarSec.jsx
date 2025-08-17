@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 const SidebarSec = () => {
     return (
-        <div className=''>
+        <div>
              <Sidebar>
                 <Menu
                     menuItemStyles={{
@@ -13,16 +13,18 @@ const SidebarSec = () => {
                         [`&.active`]: {
                         backgroundColor: '#9538E2',
                         color: '#FFFFFF',
+                        borderRadius:'50px',
+                        fontWeight:'bold'
                         },
                     },
                     }}
                 >
-                    <MenuItem component={<NavLink to="/allProducts" />}> All Product</MenuItem>
-                    <MenuItem component={<NavLink to="/laptops" />}> Laptops</MenuItem>
-                    <MenuItem component={<NavLink to="/smartWatches" />}> Smart Watches</MenuItem>
-                    <MenuItem component={<NavLink to="/phones" />}> Phones</MenuItem>
-                    <MenuItem component={<NavLink to="/macBooks" />}> MacBooks</MenuItem>
-                    <MenuItem component={<NavLink to="/accessories" />}> Accessories</MenuItem>
+                    <MenuItem className='px-5 py-3' component={<NavLink to="/allProducts" />}> All Product</MenuItem>
+                    <MenuItem className='px-5 py-3' component={<NavLink to="/laptops" />}> Laptops</MenuItem>
+                    <MenuItem className='px-5 py-3' component={<NavLink to="/smartWatches" />}> Smart Watches</MenuItem>
+                    <MenuItem className='px-5 py-3' component={<NavLink to="/phones" />}> Phones</MenuItem>
+                    <MenuItem className='px-5 py-3' component={<NavLink to="/macBooks" />}> MacBooks</MenuItem>
+                    <MenuItem className='px-5 py-3' component={<NavLink to="/accessories" />}> Accessories</MenuItem>
                 </Menu>
              </Sidebar>
         </div>
