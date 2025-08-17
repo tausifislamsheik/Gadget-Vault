@@ -9,19 +9,19 @@ const ProductDetails = () => {
     const {image, name, price, features, rating, warranty, brand} = product; 
     return (
         <div>
-            <div className="bg-[#9538E2] text-center text-white pb-44 mx-12">
-                <h1 className="text-3xl font-bold mb-3">Product Details</h1>
-                <p className="text-gray-200">Explore the latest gadgets that will take your experience to <br /> the next level. From smart devices to the coolest accessories, we have it all!</p>
+            <div className="bg-[#9538E2] text-center text-white pb-44 mx-4 lg:mx-12">
+                <h1 className="text-xl lg:text-3xl font-bold mb-3">Product Details</h1>
+                <p className="text-gray-200 text-sm">Explore the latest gadgets that will take your experience to <br /> the next level. From smart devices to the coolest accessories, we have it all!</p>
             </div>
-            <div className="-mt-32 mx-52 mb-32">
+            <div className="-mt-32 mx-20 lg:mx-52 mb-32">
                 <div className="bg-white rounded-2xl border border-gray-300">
                     <div className="hero-content justify-start flex-col lg:flex-row">
                         <img
                         src={image}
-                        className="w-4/12 bg-gray-200 py-20 p-10 rounded-lg"
+                        className="lg:w-4/12 bg-gray-200 lg:py-20 lg:p-10 rounded-lg"
                         />
                         <div className="space-y-2">
-                        <h1 className="text-3xl font-bold">{name}</h1>
+                        <h1 className="text-2xl lg:text-3xl font-bold">{name}</h1>
                         <p className="font-semibold text-gray-500">Price: $ {price}</p>
                         <p className="text-[#309C08] border border-[#309C08] bg-[#309C081A] inline-block p-2 font-semibold rounded-3xl">Brand: {brand}</p>
                         <p className="font-bold">Specification:</p>
