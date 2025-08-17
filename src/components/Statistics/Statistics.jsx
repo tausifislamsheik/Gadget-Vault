@@ -1,5 +1,3 @@
-
-
 const Statistics = () => {
     return (
         <div>

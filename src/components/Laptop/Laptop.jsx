@@ -1,8 +1,7 @@
-const AllProduct = ({allProduct}) => {
-    const {image, name, price} = allProduct
+const Laptop = ({laptop}) => {
+    const {image, name, price} = laptop
     return (
-        <div>
-            <div className="card p-5 h-96 border border-gray-300">
+        <div className="card p-5 h-96 border border-gray-300">
             <figure className="bg-gray-50 p-5">
                 <img
                 className="h-40"
@@ -17,8 +16,7 @@ const AllProduct = ({allProduct}) => {
                 </div>
             </div>
             </div>
-        </div>
     );
 };
 
-export default AllProduct;
+export default Laptop;
