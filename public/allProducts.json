@@ -1,6 +1,6 @@
 [
     {
-      "id": "PHONE_001",
+      "id": 1,
       "image": "https://i.ibb.co.com/67cf0FWd/i-Phone-15-Pro-Max.webp",
       "name": "iPhone 15 Pro Max",
       "category": "Smartphone",
@@ -23,7 +23,7 @@
       "warranty": "1 year"
     },
     {
-      "id": "PHONE_002",
+      "id": 2,
       "image": "https://i.ibb.co.com/RkNq4M1J/samsung-galaxy-s24-ultra-titanium-gray-official-image.webp",
       "name": "Samsung Galaxy S24 Ultra",
       "category": "Smartphone",
@@ -46,7 +46,7 @@
       "warranty": "1 year"
     },
     {
-      "id": "PHONE_003",
+      "id": 3,
       "image": "https://i.ibb.co.com/TBC1rPxb/PIX8-PRO-1.jpg",
       "name": "Google Pixel 8 Pro",
       "category": "Smartphone",
@@ -69,10 +69,10 @@
       "warranty": "1 year"
     },
     {
-      "id": "LAPTOP_001",
+      "id": 4,
       "image": "https://i.ibb.co.com/CKk4MX0h/Apple-Mac-Book-Pro-M3-Max.png",
       "name": "MacBook Pro 16-inch M3 Max",
-      "category": "Laptop",
+      "category": "MacBook",
       "brand": "Apple",
       "price": 3499.99,
       "inStock": true,
@@ -97,7 +97,7 @@
       "warranty": "1 year"
     },
     {
-      "id": "LAPTOP_002",
+      "id": 5,
       "image": "https://i.ibb.co.com/QjtGjdbT/Dell-XPS-13-Plus-9320-3-5-K-MC-Solution-BD-1200x675.webp",
       "name": "Dell XPS 13 Plus",
       "category": "Laptop",
@@ -125,10 +125,66 @@
       "warranty": "1 year"
     },
     {
-      "id": "LAPTOP_003",
-      "image": "https://i.ibb.co.com/dwTbWBQt/mba15-m3-silver-Custom-Mac-BD.webp",
-      "name": "MacBook Air 15-inch M3",
+      "id": 6,
+      "image": "https://i.ibb.co.com/4wNQntwm/23-C1-INTEL-OPP-Sebastian-15-FFPlus-Plus-Natural-Silver-NT-HDcam-FPR-non-ODD-non-Back-Lit-Free-DOS-C.webp",
+      "name": "HP EliteBook",
       "category": "Laptop",
+      "brand": "HP",
+      "price": 1399.99,
+      "inStock": true,
+      "quantity": 27,
+      "features": [
+        "13.4-inch OLED InfinityEdge display",
+        "Intel Core i7-13700H",
+        "16GB LPDDR5 RAM",
+        "512GB SSD",
+        "Haptic touchpad",
+        "Zero-lattice keyboard"
+      ],
+      "rating": 4.3,
+      "reviewCount": 298,
+      "color": ["Platinum Silver", "Graphite"],
+      "specs": {
+        "processor": "Intel Core i7-13700H",
+        "ram": "16GB",
+        "storage": "512GB SSD",
+        "display": "13.4-inch OLED"
+      },
+      "warranty": "1 year"
+    },
+    {
+      "id": 7,
+      "image": "https://i.ibb.co.com/B9XdDPY/HP-Elite-Book-860-G11-16-Inch-Natural-Silver-NT-IRcam-FPR-Core-Set-Win11-White-BG-Front-Open-M154686.webp",
+      "name": "HP ProBook 460 16 inch Touch screen ",
+      "category": "Laptop",
+      "brand": "HP",
+      "price": 1399.99,
+      "inStock": true,
+      "quantity": 27,
+      "features": [
+        "13.4-inch OLED InfinityEdge display",
+        "Intel Core i7-13700H",
+        "16GB LPDDR5 RAM",
+        "512GB SSD",
+        "Haptic touchpad",
+        "Zero-lattice keyboard"
+      ],
+      "rating": 4.3,
+      "reviewCount": 298,
+      "color": ["Platinum Silver", "Graphite"],
+      "specs": {
+        "processor": "Intel Core i7-13700H",
+        "ram": "16GB",
+        "storage": "512GB SSD",
+        "display": "13.4-inch OLED"
+      },
+      "warranty": "1 year"
+    },
+    {
+      "id": 8,
+      "image": "https://i.ibb.co.com/JRcfSB5F/3712-39649.jpg",
+      "name": "MacBook Pro 14” and 16”",
+      "category": "MacBook",
       "brand": "Apple",
       "price": 1299.99,
       "inStock": true,
@@ -153,7 +209,35 @@
       "warranty": "1 year"
     },
     {
-      "id": "WATCH_001",
+      "id": 9,
+      "image": "https://i.ibb.co.com/dwTbWBQt/mba15-m3-silver-Custom-Mac-BD.webp",
+      "name": "MacBook Air 15-inch M3",
+      "category": "MacBook",
+      "brand": "Apple",
+      "price": 1299.99,
+      "inStock": true,
+      "quantity": 41,
+      "features": [
+        "15.3-inch Liquid Retina display",
+        "M3 chip",
+        "8GB unified memory",
+        "256GB SSD storage",
+        "Up to 18 hours battery life",
+        "Fanless design"
+      ],
+      "rating": 4.7,
+      "reviewCount": 567,
+      "color": ["Space Gray", "Silver", "Starlight", "Midnight"],
+      "specs": {
+        "processor": "Apple M3",
+        "ram": "8GB",
+        "storage": "256GB SSD",
+        "display": "15.3-inch"
+      },
+      "warranty": "1 year"
+    },
+    {
+      "id": 10,
       "image": "https://i.ibb.co.com/0pYcJv2Z/dc9fbf45d5948ba4f975479d297aa2d6.jpg",
       "name": "Apple Watch Series 9",
       "category": "Smartwatch",
@@ -176,7 +260,7 @@
       "warranty": "1 year"
     },
     {
-      "id": "WATCH_002",
+      "id": 11,
       "image": "https://i.ibb.co.com/ks61YKR7/SAMSUNG-Galaxy-Watch-6-Classic-47mm.jpg",
       "name": "Samsung Galaxy Watch 6 Classic",
       "category": "Smartwatch",
@@ -199,7 +283,7 @@
       "warranty": "1 year"
     },
     {
-      "id": "WATCH_003",
+      "id": 12,
       "image": "https://i.ibb.co.com/1f9df6Kr/cf-lg-69399493-9540-4ea5-8033-b4aba04cea8f.webp",
       "name": "Garmin Fenix 7X Sapphire",
       "category": "Smartwatch",
@@ -222,10 +306,10 @@
       "warranty": "1 year"
     },
     {
-      "id": "ACC_001",
+      "id": 13,
       "image": "https://i.ibb.co.com/zMdGBmK/Air-Pods-Pro-2nd-Gen-with-USB-C-PDP-Image-Position-2-en-UScopy.webp",
       "name": "AirPods Pro (2nd generation)",
-      "category": "Audio Accessory",
+      "category": "Accessory",
       "brand": "Apple",
       "price": 249.99,
       "inStock": true,
@@ -244,10 +328,10 @@
       "warranty": "1 year"
     },
     {
-      "id": "ACC_002",
+      "id": 14,
       "image": "https://i.ibb.co.com/fYKJFQds/Sony-WH-1000-XM5-Wireless-Noise-Canceling-Headphones-1.jpg",
       "name": "Sony WH-1000XM5",
-      "category": "Audio Accessory",
+      "category": "Accessory",
       "brand": "Sony",
       "price": 399.99,
       "inStock": true,
@@ -266,10 +350,10 @@
       "warranty": "1 year"
     },
     {
-      "id": "ACC_003",
+      "id": 15,
       "image": "https://i.ibb.co.com/205jdfSM/images.jpg",
       "name": "Anker PowerCore 10000",
-      "category": "Power Bank",
+      "category": "Accessory",
       "brand": "Anker",
       "price": 39.99,
       "inStock": true,
@@ -288,10 +372,10 @@
       "warranty": "18 months"
     },
     {
-      "id": "ACC_004",
+      "id": 16,
       "image": "https://i.ibb.co.com/21M2X1T5/Logitech-MX-Master-3-Advanced-Wireless-7-Button-Mouse-3-1.webp",
       "name": "Logitech MX Master 3S",
-      "category": "Computer Accessory",
+      "category": "Accessory",
       "brand": "Logitech",
       "price": 99.99,
       "inStock": true,
@@ -310,10 +394,10 @@
       "warranty": "1 year"
     },
     {
-      "id": "TABLET_001",
+      "id": 17,
       "image": "https://i.ibb.co.com/LDX49v34/ipad-pro-m2-space-gray-01-500x500.webp",
       "name": "iPad Pro 12.9-inch M2",
-      "category": "Tablet",
+      "category": "Accessory",
       "brand": "Apple",
       "price": 1099.99,
       "inStock": true,
@@ -333,10 +417,10 @@
       "warranty": "1 year"
     },
     {
-      "id": "GAMING_001",
+      "id": 18,
       "image": "https://i.ibb.co.com/2YH4CTpZ/steam-deck-oled-1-500x500.webp",
       "name": "Steam Deck OLED",
-      "category": "Gaming Device",
+      "category": "Accessory",
       "brand": "Valve",
       "price": 549.99,
       "inStock": false,
@@ -356,10 +440,10 @@
       "warranty": "1 year"
     },
     {
-      "id": "ACC_005",
+      "id": 19,
       "image": "https://i.ibb.co.com/fzyGSL0P/Wireless-1-800x800.jpg",
       "name": "Belkin 3-in-1 Wireless Charger",
-      "category": "Charging Accessory",
+      "category": "Accessory",
       "brand": "Belkin",
       "price": 149.99,
       "inStock": true,
