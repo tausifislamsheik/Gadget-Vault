@@ -16,6 +16,7 @@ import Phones from './components/Phones/Phones';
 import MacBooks from './components/MacBooks/MacBooks';
 import Accessories from './components/Accessories/Accessories';
 import ErrorPage from './components/ErrorPage/ErrorPage';
+import ProductDetails from './components/ProductDetails/ProductDetails';
 
 const router = createBrowserRouter([
   {
@@ -52,6 +53,11 @@ const router = createBrowserRouter([
             element:<Accessories></Accessories>
           }
         ]
+      },
+      {
+         path:'/productDetails/:id',
+         element:<ProductDetails></ProductDetails>,
+         loader:() => fetch('allProducts.json')
       },
       {
          path:'/statistics',

@@ -10,6 +10,8 @@ const SidebarSec = () => {
                     button: {
                         // the active class will be added automatically by react router
                         // so we can use it to style the active menu item
+                        backgroundColor:'#09080F0D',
+                        borderRadius: '50px',
                         [`&.active`]: {
                         backgroundColor: '#9538E2',
                         color: '#FFFFFF',
