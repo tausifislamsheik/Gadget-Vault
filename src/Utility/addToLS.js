@@ -44,4 +44,4 @@ const addWishlistToLS = (id) =>{
     }
 }
 
-export { addCartToLS, addWishlistToLS }
+export { addCartToLS, addWishlistToLS, getStoredCart, getStoredWishlist }

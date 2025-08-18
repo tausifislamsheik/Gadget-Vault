@@ -1,14 +1,23 @@
-import { BiSolidSortAlt } from "react-icons/bi";
 
-const Cart = () => {
+
+const Cart = ({cart}) => {
+   console.log(cart)
+    const {image, name, price, features} = cart;
     return (
-        <div>
-            <div className="flex items-center justify-around my-10">
-                <h1 className="text-3xl font-bold">Cart</h1>
-                <div className="flex items-center gap-5">
-                    <p className="text-xl font-semibold">Total cost: $ <span className="font-bold">10000</span></p>
-                    <button className="btn btn-outline text-[#9538E2] px-6 font-semibold p-2 rounded-full">Sort by Price <BiSolidSortAlt className="text-lg" /></button>
-                    <button className="btn btn-outline text-white bg-[#9538E2] px-10 font-semibold p-2 rounded-full">Purchase</button>
+        <div className="mx-40 mb-5">
+            <div className="hero bg-base-200 justify-start rounded-2xl">
+                <div className="hero-content flex-col lg:flex-row">
+                    <img
+                    src={image}
+                    className="w-40 rounded-lg bg-gray-200 p-5"
+                    />
+                    <div>
+                    <h1 className="text-3xl font-bold">{name}</h1>
+                    <p className="font-bold py-1">Price: $ {price}</p>
+                    {
+                        features.map(feature => <li className="text-gray-400">{feature}</li>)
+                    }
+                    </div>
                 </div>
             </div>
         </div>

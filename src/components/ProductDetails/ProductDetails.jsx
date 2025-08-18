@@ -37,7 +37,7 @@ const ProductDetails = () => {
                         <p className="font-bold">Specification:</p>
                         <ol className="text-gray-500"> 
                         {
-                            features.map(feature => <li>{feature}</li>)
+                            features.map((feature, idx) => <li key={idx}>{feature}</li>)
                         } 
                         </ol>
                         <div className="font-bold items-center">Rating : <br />
