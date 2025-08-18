@@ -1,14 +1,15 @@
 import { useEffect, useState } from "react";
 import { NavLink, Outlet, useLoaderData } from "react-router-dom";
-import { getStoredCart } from "../../Utility/addToLS";
+import { getStoredCart, getStoredWishlist } from "../../Utility/addToLS";
 import Cart from "../Cart/Cart";
 import { BiSolidSortAlt } from "react-icons/bi";
+import Wishlist from "../Wishlist/Wishlist";
 
 
 const Dashboard = () => {
     
     const [cart, setCart] = useState([]);
-    // const [wishlist, setWishlist] = useState([]);
+    const [wishlist, setWishlist] = useState([]);
     const allProducts = useLoaderData();
     
     useEffect(() =>{
@@ -16,6 +17,13 @@ const Dashboard = () => {
         const storedCartInt = storedCart.map(id => parseInt(id));
         const cart = allProducts.filter(cart => storedCartInt.includes(cart.id))
         setCart(cart)
+    },[allProducts])
+
+    useEffect(() =>{
+        const storedWishlist = getStoredWishlist();
+        const storedWishlistInt = storedWishlist.map(id => parseInt(id))
+        const wishlist = allProducts.filter(wishlist => storedWishlistInt.includes(wishlist.id))
+        setWishlist(wishlist)
     },[allProducts])
     return (
         <div>
@@ -41,6 +49,9 @@ const Dashboard = () => {
             </div>
                 {
                     cart.map((cart) => <Cart key={cart.id} cart={cart}></Cart>)
+                }
+                {
+                    wishlist.map(wishlist => <Wishlist key={wishlist.id} wishlist={wishlist}></Wishlist>)
                 }
             <Outlet>
             </Outlet>
