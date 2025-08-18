@@ -10,6 +10,7 @@ const Dashboard = () => {
     
     const [cart, setCart] = useState([]);
     const [wishlist, setWishlist] = useState([]);
+
     const allProducts = useLoaderData();
     
     useEffect(() =>{
@@ -53,8 +54,7 @@ const Dashboard = () => {
                 {
                     wishlist.map(wishlist => <Wishlist key={wishlist.id} wishlist={wishlist}></Wishlist>)
                 }
-            <Outlet>
-            </Outlet>
+            <Outlet></Outlet>
         </div>
     );
 };

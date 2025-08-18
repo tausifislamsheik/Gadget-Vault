@@ -1,4 +1,4 @@
-
+import { MdDeleteForever } from "react-icons/md";
 
 const Cart = ({cart}) => {
     const {image, name, price, features} = cart;
@@ -10,13 +10,20 @@ const Cart = ({cart}) => {
                     src={image}
                     className="w-52 h-56 object-cover rounded-lg bg-gray-200 p-5"
                     />
-                    <div>
+                    <div className="flex">
+                         <div>
                     <h1 className="text-3xl font-bold">{name}</h1>
                     <p className="font-bold py-1">Price: $ {price}</p>
                     {
                         features.map(feature => <li className="text-gray-400">{feature}</li>)
                     }
                     </div>
+                    <div className="justify-end">
+                        <MdDeleteForever  />
+                    </div>
+                    </div>
+                    
+                
                 </div>
             </div>
         </div>
