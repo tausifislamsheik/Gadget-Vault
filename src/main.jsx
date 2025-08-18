@@ -17,6 +17,8 @@ import MacBooks from './components/MacBooks/MacBooks';
 import Accessories from './components/Accessories/Accessories';
 import ErrorPage from './components/ErrorPage/ErrorPage';
 import ProductDetails from './components/ProductDetails/ProductDetails';
+import Cart from './components/Cart/Cart';
+import Wishlist from './components/Wishlist/Wishlist';
 
 const router = createBrowserRouter([
   {
@@ -61,7 +63,17 @@ const router = createBrowserRouter([
       },
       {
         path:'/dashboard',
-        element:<Dashboard></Dashboard>
+        element:<Dashboard></Dashboard>,
+        children:[
+          {
+            path:'cart',
+            element:<Cart></Cart>
+          },
+          {
+            path:'wishlist',
+            element:<Wishlist></Wishlist>
+          }
+        ]
       },
       {
          path:'/statistics',

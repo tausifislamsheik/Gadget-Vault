@@ -1,6 +1,8 @@
 // import { useEffect, useState } from "react";
 // import { useLoaderData, useParams } from "react-router-dom";
-import { BiSolidSortAlt } from "react-icons/bi";
+
+import { NavLink, Outlet } from "react-router-dom";
+
 
 const Dashboard = () => {
     // const {id} = useParams();
@@ -18,20 +20,20 @@ const Dashboard = () => {
                 <h1 className="text-xl lg:text-3xl font-bold mb-3">Dashboard</h1>
                 <p className="text-gray-200 text-sm">Explore the latest gadgets that will take your experience to <br /> the next level. From smart devices to the coolest accessories, we have it all!</p>
                 <div className="py-10">
-                     <button className="btn btn-outline text-white hover:text-[#9538E2] px-10 font-semibold p-2 rounded-full mr-5">Cart</button>
-                     <button className="btn btn-outline text-white hover:text-[#9538E2] px-10 font-semibold p-2 rounded-full">Wishlist</button>
+                     <NavLink className={({isActive, isPending}) => isActive ? 'text-[#9538E2] bg-white rounded-3xl px-10 py-3 font-semibold mr-4' : isPending ? '' : 'btn btn-outline rounded-3xl px-10 py-3 hover:text-[#9538E2] mr-4'} to='cart'>
+                        <button className="cursor-pointer">Cart</button>
+                     </NavLink>
+                     <NavLink className={({isActive, isPending}) => isActive ? 'text-[#9538E2] bg-white rounded-3xl px-10 py-3 font-semibold ml-4' : isPending ? '' : 'btn btn-outline rounded-3xl px-10 py-3 hover:text-[#9538E2] ml-4'} to='wishlist'>
+                       <button className="cursor-pointer">Wishlist</button>
+                     </NavLink>
                 </div>
             </div> 
-            <div className="flex items-center justify-around my-10">
-                <h1 className="text-3xl font-bold">Cart</h1>
-                <div className="flex items-center gap-5">
-                    <p className="text-xl font-semibold">Total cost: $ <span className="font-bold">10000</span></p>
-                    <button className="btn btn-outline text-[#9538E2] px-10 font-semibold p-2 rounded-full">Sort by Price <BiSolidSortAlt className="text-lg" /></button>
-                    <button className="btn btn-outline text-white bg-[#9538E2] px-10 font-semibold p-2 rounded-full">Purchase</button>
-                </div>
-            </div>
+            <Outlet></Outlet>
         </div>
     );
 };
 
 export default Dashboard;
+
+
+// className="btn btn-outline text-white hover:text-[#9538E2] px-10 font-semibold p-2 rounded-full mr-5"

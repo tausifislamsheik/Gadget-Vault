@@ -1,5 +1,7 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import { IoMdCart } from "react-icons/io";
+import { addCartToLS, addWishlistToLS } from "../../Utility/addToLS";
+
 
 const ProductDetails = () => {
     const {id} = useParams();
@@ -8,9 +10,13 @@ const ProductDetails = () => {
     const product = products.find(product => product.id === idNum);
     const {image, name, price, features, rating, warranty, brand} = product; 
 
-    const handleAddToCart = () =>{
-        console.log(product)
+    const handleAddToCart = (id) =>{
+        addCartToLS(id)
     }
+    const handleWishlist = (id) =>{
+        addWishlistToLS(id)
+    }
+
     return (
         <div>
             <div className="bg-[#9538E2] text-center text-white pb-44 mx-4 lg:mx-12">
@@ -46,8 +52,8 @@ const ProductDetails = () => {
                         </div>
                         <p className="font-semibold">Warranty: {warranty}</p>
                         <div className="items-center">
-                              <button onClick={handleAddToCart} className="btn bg-[#9538E2] text-white rounded-3xl mr-3">Add To Cart  <IoMdCart className="text-xl" /></button>
-                                <button className="btn btn-circle text-xl">
+                              <button onClick={() => handleAddToCart(id)} className="btn bg-[#9538E2] text-white rounded-3xl mr-3">Add To Cart  <IoMdCart className="text-xl" /></button>
+                                <button onClick={() => handleWishlist(id)} className="btn btn-circle text-xl">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2.5" stroke="currentColor" className="size-[1.2em]"><path strokeLinecap="round" strokeLinejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" /></svg>
                                 </button>
                         </div>
