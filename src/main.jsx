@@ -60,13 +60,13 @@ const router = createBrowserRouter([
          loader:() => fetch('allProducts.json')
       },
       {
+        path:'/dashboard',
+        element:<Dashboard></Dashboard>
+      },
+      {
          path:'/statistics',
          element:<Statistics></Statistics>
       },
-      {
-        path:'/dashboard',
-        element:<Dashboard></Dashboard>
-      }
     ]
   },
 ]);

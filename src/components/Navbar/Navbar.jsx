@@ -4,8 +4,8 @@ import { FiShoppingCart } from "react-icons/fi";
 const Navbar = () => {
     const navList = <>
     <li><NavLink className={({isActive, isPending}) => isActive ? 'text-purple-500 bg-purple-50 rounded-sm px-3 py-1 font-semibold' : isPending ? '' : ''} to='/'>Home</NavLink></li>
-    <li><NavLink className={({isActive, isPending}) => isActive ? 'text-purple-500 bg-purple-50 rounded-sm px-3 py-1 font-semibold' : isPending ? '' : ''} to='/statistics'>Statistics</NavLink></li>
     <li><NavLink className={({isActive, isPending}) => isActive ? 'text-purple-500 bg-purple-50 rounded-sm px-3 py-1 font-semibold' : isPending ? '' : ''} to='/dashboard'>Dashboard</NavLink></li>
+    <li><NavLink className={({isActive, isPending}) => isActive ? 'text-purple-500 bg-purple-50 rounded-sm px-3 py-1 font-semibold' : isPending ? '' : ''} to='/statistics'>Statistics</NavLink></li>
     </>
     return (
         <div className="navbar py-8">
