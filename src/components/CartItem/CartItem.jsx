@@ -1,6 +1,6 @@
 import { MdDeleteForever } from "react-icons/md";
 
-const CartItem = ({ cart, handleRemove }) => {
+const CartItem = ({ cart, handleRemoveCart }) => {
 
      if (!cart) return null;
 
@@ -25,7 +25,7 @@ const CartItem = ({ cart, handleRemove }) => {
                 </div>
                 <div className="mr-16">
                     <MdDeleteForever 
-                        onClick={() => handleRemove(id)} 
+                        onClick={() => handleRemoveCart(id)} 
                         className="text-3xl text-red-600 hover:text-red-700 cursor-pointer" 
                     />
                 </div>

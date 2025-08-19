@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet-async";
 import { useState, useEffect } from "react";
 import { getStoredCart, getStoredWishlist } from "../../Utility/addToLS";
 import CartItem from "../CartItem/CartItem";
+import WishlistItem from "../WishlistItem/WishlistItem";
 
 
 
@@ -50,17 +51,25 @@ const Dashboard = () => {
 
 
   // remove from cart
-    const handleRemove = (id) => {
+    const handleRemoveCart = (id) => {
         const updated = cart.filter(item => item.id !== id);
         setCart(updated);
+        localStorage.setItem("cart", JSON.stringify(updated.map(i => i.id)));
+    };
+  // remove from wishlist
+    const handleRemoveWishlist = (id) => {
+        const updated = wishlist.filter(item => item.id !== id);
+        setWishlist(updated);
         localStorage.setItem("cart", JSON.stringify(updated.map(i => i.id)));
     };
 
     // Sort by price
 
     const handleSort = () =>{
-        const sortedPrice = [...cart].sort((a,b) => a.price - b.price)
-        setCart(sortedPrice)
+        const sortedCartPrice = [...cart].sort((a,b) => a.price - b.price)
+        const sortedWishlistPrice = [...wishlist].sort((a,b) => a.price - b.price)
+        setCart(sortedCartPrice)
+        setWishlist(sortedWishlistPrice)
     }
 
     return (
@@ -100,9 +109,16 @@ const Dashboard = () => {
             </div>
                 
             {cart?.length > 0 ? (
-                cart.map(item => <CartItem key={item.id} cart={item} handleRemove={handleRemove}  />)
+                cart.map(item => <CartItem key={item.id} cart={item} handleRemoveCart={handleRemoveCart}  />)
                 ) : (
                 <p className="text-center my-20 text-4xl text-gray-400">No items in cart</p>
+            )}
+
+
+            {wishlist?.length > 0 ? (
+                wishlist.map(item => <WishlistItem key={item.id} wishlist={item} handleRemoveWishlist={handleRemoveWishlist} />)
+                ) : (
+                <p className="text-center my-20 text-4xl text-gray-400">No items in wishlist</p>
             )}
 
             {/* Pass products to children */}
