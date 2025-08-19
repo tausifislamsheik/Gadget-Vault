@@ -17,9 +17,9 @@ const Statistics = () => {
     const CustomTooltip = ({ active, payload  }) => {
         if (active && payload && payload.length) {
             return (
-                <div className="bg-slate-50 text-black p-3 rounded-lg shadow-lg border">
+                <div className="bg-[#9538E2] text-white p-3 rounded-lg shadow-lg border">
                     <p className="font-semibold">{`Product: ${payload[0].payload.name}`}</p>
-                    <p className="text-green-600 font-bold">{`Price: $${payload[0].value}`}</p>
+                    <p className="text-yellow-200 font-bold">{`Price: $${payload[0].value}`}</p>
                 </div>
             );
         }
