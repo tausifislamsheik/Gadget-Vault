@@ -3,6 +3,9 @@ import { BiSolidSortAlt } from "react-icons/bi";
 import { Helmet } from "react-helmet-async";
 import { useState, useEffect } from "react";
 import { getStoredCart, getStoredWishlist } from "../../Utility/addToLS";
+import CartItem from "../CartItem/CartItem";
+
+
 
 const Dashboard = () => {
     const [loading, setLoading] = useState(true);
@@ -10,6 +13,7 @@ const Dashboard = () => {
     const [cart, setCart] = useState([]);
     const [wishlist, setWishlist] = useState([]);
 
+    
     useEffect(() => {
 
         setLoading(true);
@@ -44,6 +48,21 @@ const Dashboard = () => {
     );
   }
 
+
+  // remove from cart
+    const handleRemove = (id) => {
+        const updated = cart.filter(item => item.id !== id);
+        setCart(updated);
+        localStorage.setItem("cart", JSON.stringify(updated.map(i => i.id)));
+    };
+
+    // Sort by price
+
+    const handleSort = () =>{
+        const sortedPrice = [...cart].sort((a,b) => a.price - b.price)
+        setCart(sortedPrice)
+    }
+
     return (
         <div>
             <Helmet>
@@ -71,7 +90,7 @@ const Dashboard = () => {
                     <p className="lg:text-xl font-semibold">
                         Total cost: $ <span className="font-bold">{totalCost}</span>
                     </p>
-                    <button className="btn btn-outline text-[#9538E2] lg:px-6 font-semibold p-2 rounded-full">
+                    <button onClick={handleSort} className="btn btn-outline text-[#9538E2] lg:px-6 font-semibold p-2 rounded-full">
                         Sort by Price <BiSolidSortAlt className="text-lg" />
                     </button>
                     <button className="btn btn-outline text-white bg-[#9538E2] lg:px-10 font-semibold p-2 rounded-full">
@@ -80,6 +99,12 @@ const Dashboard = () => {
                 </div>
             </div>
                 
+            {cart?.length > 0 ? (
+                cart.map(item => <CartItem key={item.id} cart={item} handleRemove={handleRemove}  />)
+                ) : (
+                <p className="text-center my-20 text-4xl text-gray-400">No items in cart</p>
+            )}
+
             {/* Pass products to children */}
             <Outlet context={{ allProducts, cart, setCart, wishlist, setWishlist }} />
         </div>
