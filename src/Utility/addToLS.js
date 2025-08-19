@@ -35,7 +35,7 @@ const addCartToLS = (id) =>{
         storedCart.push(id)
         const storedCartStr = JSON.stringify(storedCart)
         localStorage.setItem('cart', storedCartStr)
-        toast('Product successfully added to cart')
+        toast.success('Product successfully added to cart')
     }
 }
 
@@ -73,7 +73,7 @@ const addWishlistToLS = (id) =>{
         storedWishlist.push(id)
         const storedWishlistStr = JSON.stringify(storedWishlist);
         localStorage.setItem('wishlist', storedWishlistStr)
-        toast('Product successfully added to wishlist')
+        toast.success('Product successfully added to wishlist')
     }
 }
 
