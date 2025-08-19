@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 
 const getStoredCart = () => {
   try {
-    const storedCart = localStorage.getItem("cart");
+    const storedCart = localStorage.getItem("cart") || [];
     if (!storedCart) return [];
 
     let parsed = JSON.parse(storedCart);

@@ -1,7 +1,9 @@
 import { MdDeleteForever } from "react-icons/md";
 
 const CartItem = ({ cart, handleRemove }) => {
+     if (!cart) return null;
     const { id, image, name, price, features } = cart;
+    console.log(id)
     return (
         <div className="mx-10 lg:mx-40 mb-5">
             <div className="hero flex lg:justify-between bg-base-200 rounded-2xl">

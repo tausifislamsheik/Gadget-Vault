@@ -1,15 +1,17 @@
 import { Helmet } from "react-helmet-async";
 import { useLoaderData } from "react-router-dom";
-import { BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid, ResponsiveContainer, Cell } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid, ResponsiveContainer } from 'recharts';
 
 const Statistics = () => {
     const allProducts = useLoaderData();
+    
 
     // Transform data for the chart - extracting first letter of product name and price
+    
     const chartData = allProducts?.map((product, index) => ({
         name: product.name ? product.name.charAt(0).toUpperCase() : 'P',
         price: product.price || 0,
-        fullName: product.product_title,
+        fullName: product.name,
         originalIndex: index
     })) || [];
 
@@ -25,9 +27,11 @@ const Statistics = () => {
         }
         return null;
     };
+    
 
     // Custom bar colors - alternating purple shades
     const barColor = '#9538E2';
+    
 
     return (
         <div className="min-h-screen bg-gray-50">

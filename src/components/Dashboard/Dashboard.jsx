@@ -2,15 +2,18 @@ import { NavLink, Outlet, useLoaderData } from "react-router-dom";
 import { BiSolidSortAlt } from "react-icons/bi";
 import { Helmet } from "react-helmet-async";
 import { useState, useEffect } from "react";
-import { getStoredCart } from "../../Utility/addToLS";
+import { getStoredCart, getStoredWishlist } from "../../Utility/addToLS";
 
 const Dashboard = () => {
+    const [loading, setLoading] = useState(true);
     const allProducts = useLoaderData(); 
     const [cart, setCart] = useState([]);
     const [wishlist, setWishlist] = useState([]);
 
     useEffect(() => {
-        
+
+        setLoading(true);
+
         // Cart
         const storedCart = getStoredCart();
         const storedCartInt = storedCart.map(id => parseInt(id));
@@ -18,14 +21,28 @@ const Dashboard = () => {
         setCart(matchedCart);
 
         // Wishlist
-        const storedWishlist = getStoredCart();
+        const storedWishlist = getStoredWishlist();
         const storedWishlistInt = storedWishlist.map(id => parseInt(id));
         const matchedWishlist = allProducts.filter(p => storedWishlistInt.includes(p.id));
         setWishlist(matchedWishlist);
+        setLoading(false);
     }, [allProducts]);
 
     // total cost
     const totalCost = cart.reduce((sum, item) => sum + item.price, 0);
+
+    // Loading
+
+    if (loading) {
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto mb-4"></div>
+          <p className="text-gray-600">Loading books data...</p>
+        </div>
+      </div>
+    );
+  }
 
     return (
         <div>

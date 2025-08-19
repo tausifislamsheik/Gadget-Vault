@@ -13,9 +13,11 @@ const Cart = () => {
 
     return (
         <div>
-            {cart.map(item => (
-                <CartItem key={item.id} cart={item} handleRemove={handleRemove} />
-            ))}
+            {cart?.length > 0 ? (
+                cart.map(item => <CartItem key={item.id} cart={item} handleRemove={handleRemove} />)
+                ) : (
+                <p>No items in cart</p>
+            )}
         </div>
     );
 };
