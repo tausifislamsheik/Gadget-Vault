@@ -1,33 +1,15 @@
-import { useEffect, useState } from "react";
-import { NavLink, Outlet, useLoaderData } from "react-router-dom";
-import { getStoredCart, getStoredWishlist } from "../../Utility/addToLS";
-import Cart from "../Cart/Cart";
+import { NavLink, Outlet } from "react-router-dom";
 import { BiSolidSortAlt } from "react-icons/bi";
-import Wishlist from "../Wishlist/Wishlist";
+import { Helmet } from "react-helmet-async";
 
 
 const Dashboard = () => {
     
-    const [cart, setCart] = useState([]);
-    const [wishlist, setWishlist] = useState([]);
-
-    const allProducts = useLoaderData();
-    
-    useEffect(() =>{
-        const storedCart = getStoredCart();
-        const storedCartInt = storedCart.map(id => parseInt(id));
-        const cart = allProducts.filter(cart => storedCartInt.includes(cart.id))
-        setCart(cart)
-    },[allProducts])
-
-    useEffect(() =>{
-        const storedWishlist = getStoredWishlist();
-        const storedWishlistInt = storedWishlist.map(id => parseInt(id))
-        const wishlist = allProducts.filter(wishlist => storedWishlistInt.includes(wishlist.id))
-        setWishlist(wishlist)
-    },[allProducts])
     return (
         <div>
+            <Helmet>
+                <title>Gadget Vault | Dashboard</title>
+            </Helmet>
            <div className="bg-[#9538E2] text-center text-white mx-4 lg:mx-12">
                 <h1 className="text-xl lg:text-3xl font-bold mb-3">Dashboard</h1>
                 <p className="text-gray-200 text-sm">Explore the latest gadgets that will take your experience to <br /> the next level. From smart devices to the coolest accessories, we have it all!</p>
@@ -48,12 +30,8 @@ const Dashboard = () => {
                     <button className="btn btn-outline text-white bg-[#9538E2] lg:px-10 font-semibold p-2 rounded-full">Purchase</button>
                 </div>
             </div>
-                {
-                    cart.map((cart) => <Cart key={cart.id} cart={cart}></Cart>)
-                }
-                {
-                    wishlist.map(wishlist => <Wishlist key={wishlist.id} wishlist={wishlist}></Wishlist>)
-                }
+                
+                
             <Outlet></Outlet>
         </div>
     );
@@ -62,4 +40,3 @@ const Dashboard = () => {
 export default Dashboard;
 
 
-// className="btn btn-outline text-white hover:text-[#9538E2] px-10 font-semibold p-2 rounded-full mr-5"

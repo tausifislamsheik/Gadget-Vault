@@ -17,8 +17,9 @@ import MacBooks from './components/MacBooks/MacBooks';
 import Accessories from './components/Accessories/Accessories';
 import ErrorPage from './components/ErrorPage/ErrorPage';
 import ProductDetails from './components/ProductDetails/ProductDetails';
-import Cart from './components/Cart/Cart';
-import Wishlist from './components/Wishlist/Wishlist';
+import Cart from './components/CartItem/CartItem';
+import Wishlist from './components/WishlistItem/WishlistItem';
+import { HelmetProvider } from 'react-helmet-async';
 
 const router = createBrowserRouter([
   {
@@ -86,6 +87,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <HelmetProvider>
+      <RouterProvider router={router} />
+    </HelmetProvider>
   </StrictMode>,
 )
