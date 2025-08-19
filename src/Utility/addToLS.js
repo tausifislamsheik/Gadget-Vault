@@ -1,12 +1,30 @@
 // Cart
 
-const getStoredCart = () =>{
-    const storedCart = localStorage.getItem('cart');
-    if(storedCart){
-        const storedCartParse = JSON.parse(storedCart)
-        return storedCartParse;
-    }return [] ;
-}
+import { toast } from "react-toastify";
+
+const getStoredCart = () => {
+  try {
+    const storedCart = localStorage.getItem("cart");
+    if (!storedCart) return [];
+
+    let parsed = JSON.parse(storedCart);
+
+    // Ensure it's always an array
+    if (!Array.isArray(parsed)) {
+      return [];
+    }
+
+    // Filter out invalid values (non-numbers, NaN, null, undefined)
+    parsed = parsed
+      .map(id => parseInt(id))
+      .filter(id => Number.isInteger(id) && id > 0);
+
+    return parsed;
+  } catch (error) {
+    console.error("Error parsing cart from localStorage", error);
+    return [];
+  }
+};
 
 
 const addCartToLS = (id) =>{
@@ -17,21 +35,35 @@ const addCartToLS = (id) =>{
         storedCart.push(id)
         const storedCartStr = JSON.stringify(storedCart)
         localStorage.setItem('cart', storedCartStr)
+        toast('Product successfully added to cart')
     }
 }
 
 // Wishlist
 
 
-const getStoredWishlist = () =>{
-    const storedWishlist = localStorage.getItem('wishlist');
-    if(storedWishlist){
-        const storedWishlistParse = JSON.parse(storedWishlist)
-        return storedWishlistParse;
-    }else{
-        return [] ;
+const getStoredWishlist = () => {
+  try {
+    const storedWishlist = localStorage.getItem("wishlist");
+    if (!storedWishlist) return [];
+
+    let parsed = JSON.parse(storedWishlist);
+
+    if (!Array.isArray(parsed)) {
+      return [];
     }
-}
+
+    parsed = parsed
+      .map(id => parseInt(id))
+      .filter(id => Number.isInteger(id) && id > 0);
+
+    return parsed;
+  } catch (error) {
+    console.error("Error parsing wishlist from localStorage", error);
+    return [];
+  }
+};
+
 
 const addWishlistToLS = (id) =>{
     const storedWishlist = getStoredWishlist();
@@ -41,6 +73,7 @@ const addWishlistToLS = (id) =>{
         storedWishlist.push(id)
         const storedWishlistStr = JSON.stringify(storedWishlist);
         localStorage.setItem('wishlist', storedWishlistStr)
+        toast('Product successfully added to wishlist')
     }
 }
 

@@ -20,6 +20,7 @@ import ProductDetails from './components/ProductDetails/ProductDetails';
 import Cart from './components/CartItem/CartItem';
 import Wishlist from './components/WishlistItem/WishlistItem';
 import { HelmetProvider } from 'react-helmet-async';
+  import { ToastContainer } from 'react-toastify';
 
 const router = createBrowserRouter([
   {
@@ -89,6 +90,7 @@ createRoot(document.getElementById('root')).render(
   <StrictMode>
     <HelmetProvider>
       <RouterProvider router={router} />
+       <ToastContainer />
     </HelmetProvider>
   </StrictMode>,
 )

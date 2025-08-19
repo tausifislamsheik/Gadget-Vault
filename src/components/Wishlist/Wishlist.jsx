@@ -1,26 +1,19 @@
-import { useLoaderData } from "react-router-dom";
+import { useOutletContext } from "react-router-dom";
 import WishlistItem from "../WishlistItem/WishlistItem";
-import { getStoredWishlist } from "../../Utility/addToLS";
-import { useEffect, useState } from "react";
 
-const Wishlists = () => {
-    const [wishlists, setWishlists] = useState([]);
-    const allProducts = useLoaderData();
-
-    useEffect(() =>{
-        const storedWishlist = getStoredWishlist();
-        const storedWishlistInt = storedWishlist.map(id => parseInt(id))
-        const wishlist = allProducts.filter(wishlist => storedWishlistInt.includes(wishlist.id))
-        setWishlists(wishlist)
-    },[allProducts])
+const Wishlist = () => {
+    
+    const {wishlist} = useOutletContext();
+    // you can build state if needed, but context already provides products
+    // do filtering with getStoredWishlist() same way if required
 
     return (
         <div>
-            {
-                 wishlists.map(wishlist => <WishlistItem key={wishlist.id} wishlist={wishlist}></WishlistItem>)
-            }
+            {wishlist.map(item => (
+                <WishlistItem key={item.id} wishlist={item} />
+            ))}
         </div>
     );
 };
 
-export default Wishlists;
+export default Wishlist;

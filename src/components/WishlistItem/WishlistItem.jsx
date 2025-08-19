@@ -1,4 +1,4 @@
-const Wishlist = ({wishlist}) => {
+const WishlistItem = ({wishlist}) => {
     const {image, name, price, features} = wishlist;
     return (
         <div className="mx-10 lg:mx-40 mb-5">
@@ -21,4 +21,4 @@ const Wishlist = ({wishlist}) => {
     );
 };
 
-export default Wishlist;
+export default WishlistItem;

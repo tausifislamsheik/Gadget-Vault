@@ -1,26 +1,23 @@
-import { useEffect, useState } from "react";
-import { useLoaderData } from "react-router-dom";
-import { getStoredCart } from "../../Utility/addToLS";
+import { useOutletContext } from "react-router-dom";
 import CartItem from "../CartItem/CartItem";
 
-const Carts = () => {
-    const [carts, setCarts] = useState([]);
-    const allProducts = useLoaderData();
+const Cart = () => {
+    const { cart, setCart } = useOutletContext();
 
-    useEffect(() =>{
-        const storedCart = getStoredCart();
-        const storedCartInt = storedCart.map(id => parseInt(id));
-        const cart = allProducts.filter(cart => storedCartInt.includes(cart.id))
-        setCarts(cart)
-    },[allProducts])
+    // remove from cart
+    const handleRemove = (id) => {
+        const updated = cart.filter(item => item.id !== id);
+        setCart(updated);
+        localStorage.setItem("cart", JSON.stringify(updated.map(i => i.id)));
+    };
 
     return (
         <div>
-            {
-                carts.map((cart) => <CartItem key={cart.id} cart={cart}></CartItem>)
-            }
+            {cart.map(item => (
+                <CartItem key={item.id} cart={item} handleRemove={handleRemove} />
+            ))}
         </div>
     );
 };
 
-export default Carts;
+export default Cart;
