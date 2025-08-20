@@ -44,7 +44,7 @@ const addCartToLS = (id) =>{
 
 const getStoredWishlist = () => {
   try {
-    const storedWishlist = localStorage.getItem("wishlist");
+    const storedWishlist = localStorage.getItem("wishlist") || [];
     if (!storedWishlist) return [];
 
     let parsed = JSON.parse(storedWishlist);

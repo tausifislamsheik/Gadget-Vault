@@ -43,7 +43,7 @@ const Dashboard = () => {
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto mb-4"></div>
-          <p className="text-gray-600">Loading books data...</p>
+          <p className="text-gray-600">Loading dashboard data...</p>
         </div>
       </div>
     );
@@ -52,15 +52,15 @@ const Dashboard = () => {
 
   // remove from cart
     const handleRemoveCart = (id) => {
-        const updated = cart.filter(item => item.id !== id);
-        setCart(updated);
-        localStorage.setItem("cart", JSON.stringify(updated.map(i => i.id)));
+        const updatedCart = cart.filter(item => item.id !== id);
+        setCart(updatedCart);
+        localStorage.setItem("cart", JSON.stringify(updatedCart.map(i => i.id)));
     };
   // remove from wishlist
     const handleRemoveWishlist = (id) => {
-        const updated = wishlist.filter(item => item.id !== id);
-        setWishlist(updated);
-        localStorage.setItem("cart", JSON.stringify(updated.map(i => i.id)));
+        const updatedWishlist = wishlist.filter(item => item.id !== id);
+        setWishlist(updatedWishlist);
+        localStorage.setItem("wishlist", JSON.stringify(updatedWishlist.map(i => i.id)));
     };
 
     // Sort by price
