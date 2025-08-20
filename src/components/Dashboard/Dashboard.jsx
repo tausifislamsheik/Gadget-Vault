@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import { getStoredCart, getStoredWishlist } from "../../Utility/addToLS";
 import CartItem from "../CartItem/CartItem";
 import WishlistItem from "../WishlistItem/WishlistItem";
+import { toast } from "react-toastify";
 
 
 
@@ -55,12 +56,14 @@ const Dashboard = () => {
         const updatedCart = cart.filter(item => item.id !== id);
         setCart(updatedCart);
         localStorage.setItem("cart", JSON.stringify(updatedCart.map(i => i.id)));
+        toast('Selected product removed from Cart')
     };
   // remove from wishlist
     const handleRemoveWishlist = (id) => {
         const updatedWishlist = wishlist.filter(item => item.id !== id);
         setWishlist(updatedWishlist);
         localStorage.setItem("wishlist", JSON.stringify(updatedWishlist.map(i => i.id)));
+        toast('Selected product removed from Wishlist')
     };
 
     // Sort by price
