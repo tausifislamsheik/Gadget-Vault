@@ -34,7 +34,7 @@ const Statistics = () => {
     
 
     return (
-        <div className="min-h-screen bg-gray-50">
+        <div className="min-h-screen">
             <Helmet>
                 <title>Gadget Vault | Statistics</title>
             </Helmet>
@@ -49,7 +49,7 @@ const Statistics = () => {
             </div>
 
             {/* Chart Section */}
-            <div className="mx-4 lg:mx-12 my-8 bg-white p-6 rounded-lg shadow-sm">
+            <div className="mx-4 lg:mx-12 my-8 bg-white p-6 rounded-lg shadow-lg">
                 <div className="mb-6">
                     <h2 className="text-xl font-bold text-gray-800 mb-2">Product Price Distribution</h2>
                     <p className="text-gray-600 text-sm">Product prices across different categories (Hover over bars for details)</p>
