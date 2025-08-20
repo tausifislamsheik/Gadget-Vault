@@ -114,14 +114,18 @@ const Dashboard = () => {
             {cart?.length > 0 ? (
                 cart.map(item => <CartItem key={item.id} cart={item} handleRemoveCart={handleRemoveCart}  />)
                 ) : (
-                <p className="text-center my-20 text-4xl text-gray-400">No items in cart</p>
+                <div className="text-center my-20">
+                    <p className="text-4xl text-gray-400 border inline p-5 rounded-2xl border-gray-300">No items in cart</p>
+                </div>
             )}
 
 
             {wishlist?.length > 0 ? (
                 wishlist.map(item => <WishlistItem key={item.id} wishlist={item} handleRemoveWishlist={handleRemoveWishlist} />)
                 ) : (
-                <p className="text-center my-20 text-4xl text-gray-400">No items in wishlist</p>
+                <div className="text-center my-20">
+                    <p className="text-4xl text-gray-400 border inline p-5 rounded-2xl border-gray-300">No items in wishlist</p>
+                </div>
             )}
 
             {/* Pass products to children */}
