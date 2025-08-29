@@ -3,7 +3,6 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import {
   createBrowserRouter,
-  Navigate,
   RouterProvider,
 } from "react-router-dom";
 import Root from './components/Root/Root';
@@ -33,10 +32,6 @@ const router = createBrowserRouter([
         path:'/',
         element:<Home></Home>,
         children:[
-          {
-            path:'',
-            element:<Navigate to={'/allProducts/1'}></Navigate>
-          },
           {
             path:'/allProducts',
             element:<AllProducts></AllProducts>
